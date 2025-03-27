@@ -3,7 +3,6 @@ import { Cake, Mail, MapPin, Play, Youtube, BookOpen, Calendar, Trophy, Calculat
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { VideoCard } from "@/components/video-card"
 import { FeatureCard } from "@/components/feature-card"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { SocialLinks } from "@/components/social-links"
@@ -12,8 +11,43 @@ import { UpcomingEvents } from "@/components/upcoming-events"
 import { DownloadResources } from "@/components/download-resources"
 import { QuickLinks } from "@/components/quick-links"
 import { AnimatedBackground } from "@/components/animated-background"
+import { FeaturedVideosSection } from "@/components/featured-videos-section"
 
 export default function Home() {
+  // Dados para os vídeos em destaque
+  const featuredVideos = [
+    {
+      title: "O que é Potência Aeróbica na Corrida? Porque não gastar tempo nessa zona?",
+      thumbnail: "/placeholder.svg?height=200&width=320",
+      views: "12k visualizações",
+      url: "#"
+    },
+    {
+      title: "Ritmo de Limiar: Guia Definitivo",
+      thumbnail: "/placeholder.svg?height=200&width=320",
+      views: "9k visualizações",
+      url: "#"
+    },
+    {
+      title: "Mente de Corredor: Um Guia para a Corrida Consciente",
+      thumbnail: "/placeholder.svg?height=200&width=320",
+      views: "7.5k visualizações",
+      url: "#"
+    },
+    {
+      title: "Tolerância ao Esforço: Por que alguns corredores aguentam mais?",
+      thumbnail: "/placeholder.svg?height=200&width=320",
+      views: "8.5k visualizações",
+      url: "#"
+    },
+    {
+      title: "O segredo dos corredores quenianos",
+      thumbnail: "/placeholder.svg?height=200&width=320",
+      views: "12k visualizações",
+      url: "#"
+    }
+  ]
+
   return (
     <main className="min-h-screen">
       {/* Dynamic animated background */}
@@ -160,6 +194,9 @@ export default function Home() {
               />
             </div>
 
+            {/* Vídeos em Destaque - Agora na coluna central */}
+            <FeaturedVideosSection videos={featuredVideos} />
+
             {/* Upcoming Events */}
             <UpcomingEvents
               events={[
@@ -266,49 +303,6 @@ export default function Home() {
               ]}
             />
           </div>
-
-          {/* Right Column - Videos */}
-          <div className="md:col-span-3 lg:col-span-1">
-            <Card className="bg-zinc-900/80 text-white dark:bg-zinc-800/80 backdrop-blur-sm border-zinc-800/50 h-full">
-              <CardHeader className="flex flex-row items-center">
-                <Play className="h-5 w-5 text-red-600 mr-2" />
-                <CardTitle>Vídeos em Destaque</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-zinc-400">Os melhores conteúdos do canal para você começar</p>
-
-                <VideoCard
-                  title="O que é Potência Aeróbica na Corrida? Porque não gastar tempo nessa zona?"
-                  thumbnail="/placeholder.svg?height=80&width=120"
-                  views="12k visualizações"
-                />
-
-                <VideoCard
-                  title="Ritmo de Limiar: Guia Definitivo"
-                  thumbnail="/placeholder.svg?height=80&width=120"
-                  views="9k visualizações"
-                />
-
-                <VideoCard
-                  title="Mente de Corredor: Um Guia para a Corrida Consciente"
-                  thumbnail="/placeholder.svg?height=80&width=120"
-                  views="7.5k visualizações"
-                />
-
-                <VideoCard
-                  title="Tolerância ao Esforço: Por que alguns corredores aguentam mais?"
-                  thumbnail="/placeholder.svg?height=80&width=120"
-                  views="8.5k visualizações"
-                />
-
-                <VideoCard
-                  title="O segredo dos corredores quenianos"
-                  thumbnail="/placeholder.svg?height=80&width=120"
-                  views="12k visualizações"
-                />
-              </CardContent>
-            </Card>
-          </div>
         </div>
 
         <footer className="mt-12 text-center text-zinc-500 text-sm">
@@ -318,4 +312,3 @@ export default function Home() {
     </main>
   )
 }
-
