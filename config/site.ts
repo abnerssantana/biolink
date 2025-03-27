@@ -29,13 +29,13 @@ export const siteConfig = {
   featuredVideos: [
     {
       title: "O que é Potência Aeróbica na Corrida? Porque não gastar tempo nessa zona?",
-      thumbnail: "/videos/potencia-aerobica.jpg",
+      thumbnail: "/videos/potencia.jpg",
       views: "12k visualizações",
       url: "#",
     },
     {
       title: "Ritmo de Limiar: Guia Definitivo",
-      thumbnail: "/videos/ritmo-limiar.jpg",
+      thumbnail: "/videos/limiar.jpg",
       views: "9k visualizações",
       url: "#",
     },
@@ -47,13 +47,19 @@ export const siteConfig = {
     },
     {
       title: "Tolerância ao Esforço: Por que alguns corredores aguentam mais?",
-      thumbnail: "/videos/tolerancia-esforco.jpg",
+      thumbnail: "/videos/esforco.jpg",
       views: "8.5k visualizações",
       url: "#",
     },
     {
+      title: "Suplementos Mágicos: O que realmente funciona?",
+      thumbnail: "/videos/suplementos.jpg",
+      views: "12k visualizações",
+      url: "#",
+    },
+    {
       title: "O segredo dos corredores quenianos",
-      thumbnail: "/videos/corredores-quenianos.jpg",
+      thumbnail: "/videos/quenia.jpg",
       views: "12k visualizações",
       url: "#",
     },
