@@ -77,8 +77,8 @@ export default function Home() {
               </CardHeader>
               <CardContent className="text-center pt-4">
                 <div className="mb-2 text-orange-400">
-                  <span>🏃‍♂️ Ultramaratonista </span>
-                  <span className="inline-flex items-center">🏅 🔥</span>
+                  <span>Seu Alienígena Favorito </span>
+                  <span className="inline-flex items-center">👽❤️✌️</span>
                 </div>
                 <CardTitle className="text-3xl font-bold text-white mb-2">Abner Santana</CardTitle>
                 <CardDescription className="text-zinc-300 dark:text-zinc-400">
